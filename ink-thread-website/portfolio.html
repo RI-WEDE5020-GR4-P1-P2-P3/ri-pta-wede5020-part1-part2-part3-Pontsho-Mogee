@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink & Thread Studio | Portfolio</title>
+    <meta name="description" content="View past work from Ink & Thread Studio, including T-shirts, artwork, event and business merchandise.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Site header: logo and main navigation, identical across every page -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">Ink<span class="amp">&amp;</span>Thread</a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the Studio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="request-design.html">Request a Design</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main page content -->
+    <main>
+        <!-- Page title and short introductory description for this page -->
+        <section class="page-heading">
+            <h1>Portfolio</h1>
+            <p>A look at some of our past custom work.</p>
+        </section>
+
+        <!-- Category filter buttons for the portfolio grid (click-filtering logic to be added in Part 3 with JavaScript) -->
+        <section class="portfolio-filters">
+            <!-- Filtering functionality (JavaScript) to be added in Part 3 -->
+            <ul>
+                <li>All</li>
+                <li>T-Shirts</li>
+                <li>Artwork</li>
+                <li>Events</li>
+                <li>Business</li>
+            </ul>
+        </section>
+
+        <!-- Grid of past custom design work, grouped by category via data-category attributes -->
+        <section class="portfolio-gallery">
+            <article class="portfolio-item" data-category="t-shirts">
+                <img src="images/portfolio/tshirt-1.jpg" alt="Custom printed T-shirt design">
+                <h3>Custom T-Shirt Design</h3>
+            </article>
+
+            <article class="portfolio-item" data-category="artwork">
+                <img src="images/portfolio/artwork-1.jpg" alt="Personalised artwork print">
+                <h3>Personalised Artwork</h3>
+            </article>
+
+            <article class="portfolio-item" data-category="events">
+                <img src="images/portfolio/event-1.jpg" alt="Event merchandise example">
+                <h3>Event Merchandise</h3>
+            </article>
+
+            <article class="portfolio-item" data-category="business">
+                <img src="images/portfolio/business-1.jpg" alt="Branded business merchandise">
+                <h3>Business Merchandise</h3>
+            </article>
+        </section>
+    </main>
+
+    <!-- Site footer: copyright and quick links -->
+    <footer>
+        <p>&copy; 2026 Ink & Thread Studio. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="portfolio.html">Our Work</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

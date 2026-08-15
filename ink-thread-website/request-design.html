@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink & Thread Studio | Request a Design</title>
+    <meta name="description" content="Submit a custom design request to Ink & Thread Studio.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Site header: logo and main navigation, identical across every page -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+                <a href="index.html">Ink<span class="amp">&amp;</span>Thread</a>
+            </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the Studio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="request-design.html">Request a Design</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main page content -->
+    <main>
+        <!-- Page title and short introductory description for this page -->
+        <section class="page-heading">
+            <h1>Request a Design</h1>
+            <p>Tell us about your idea and we'll get back to you.</p>
+        </section>
+
+        <!-- Custom design request form collecting full order details from the customer -->
+        <section class="design-form">
+            <form action="#" method="post">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="product-type">Product Type</label>
+                <select id="product-type" name="product-type" required>
+                    <option value="">-- Please select --</option>
+                    <option value="tshirt">Custom T-Shirt</option>
+                    <option value="tote">Tote Bag</option>
+                    <option value="artwork">Personalised Artwork</option>
+                    <option value="event">Event Merchandise</option>
+                    <option value="business">Business Merchandise</option>
+                </select>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1" required>
+
+                <label for="size">Preferred Size</label>
+                <input type="text" id="size" name="size">
+
+                <label for="colour">Preferred Colour</label>
+                <input type="text" id="colour" name="colour">
+
+                <label for="description">Design Description</label>
+                <textarea id="description" name="description" rows="5" required></textarea>
+
+                <label for="purpose">Event / Purpose</label>
+                <input type="text" id="purpose" name="purpose">
+
+                <label for="deadline">Required Completion Date</label>
+                <input type="date" id="deadline" name="deadline">
+
+                <label for="artwork">Do you already have artwork?</label>
+                <select id="artwork" name="artwork">
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="additional">Additional Requirements</label>
+                <textarea id="additional" name="additional" rows="3"></textarea>
+
+                <button type="submit">Submit Request</button>
+            </form>
+        </section>
+    </main>
+
+    <!-- Site footer: copyright and quick links -->
+    <footer>
+        <p>&copy; 2026 Ink & Thread Studio. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="portfolio.html">Our Work</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
