@@ -140,27 +140,9 @@ identity.
 - **Signature element:** asymmetric portfolio grid with hairline borders and
   hover reveal, echoing how fabric swatches are laid out for selection
 
-## Changelog
-
-| Date | Change |
-|------|--------|
-| [add date] | Website Project Proposal drafted and submitted for lecturer approval (two proposals: RE:ROOT Youth Environmental & Skills Initiative; Ink & Thread Studio). |
-| [add date] | Proposal for Ink & Thread Studio approved by lecturer. |
-| [add date] | Sitemap and file/folder structure planned for Ink & Thread Studio. |
-| [add date] | Initial semantic HTML structure built for all seven pages (header, nav, main, footer) with functional internal linking. |
-| [add date] | Explored multiple visual design directions for the CSS build phase. |
-| [add date] | Final design direction ("Modern Fabric Grid") selected and applied across all pages. |
-| [add date] | Added descriptive HTML comments across every page. |
-| [add date] | Added supporting images and alt text to Home, About and Services pages. |
-| [add date] | Built content inventory and annotated sitemap; expanded README to cover project overview, goals, technologies and how-to-run instructions. |
-
-*(Update the dates above to match your actual working/commit dates, and add new rows as you continue through Part 2 and Part 3.)*
-
 ## References
 
-Google Fonts (2026) *Archivo Black*. Available at: https://fonts.google.com/specimen/Archivo+Black (Accessed: [add date]).
-
-Google Fonts (2026) *Inter*. Available at: https://fonts.google.com/specimen/Inter (Accessed: [add date]).
+OpenAI.2025.Chat-GBT(version 5.3).[Large language mode].Available at:<https://chat.openai/>[Accessed:12 April 2026].
 
 Mozilla Developer Network (2026) *CSS Grid Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout (Accessed: [add date]).
 
@@ -169,35 +151,3 @@ Mozilla Developer Network (2026) *Flexible Box Layout*. Available at: https://de
 W3Schools (2026) *HTML Forms*. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: [add date]).
 
 Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: https://claude.ai (Accessed: [add date]).
-
-*(Add any further sources you personally consulted — tutorials, articles, icon libraries, image sources, etc. — using the same Harvard format.)*
-
-## AI Usage Disclosure
-
-Claude (Anthropic) was used to assist with planning the sitemap and content
-inventory, generating the semantic HTML structure, developing the CSS design
-system, and drafting this README/changelog for this project. All content was
-reviewed and adapted by the student.
-
-**Per the module's Instruction 8, remember to also prepare:**
-- An in-text citation each time AI-generated content/code is used in the body of your work
-- A full reference (see References above)
-- An **AI disclosure annexe** with screen grab(s) of your AI tool usage, as per IIE guidelines
-
-Check your module guide or IIE's AI referencing guidelines for the exact annexe format required.
-
-## GitHub Commit Practice — Important
-
-This module marks **GitHub Commits (5 marks)** on multiple, descriptive commits
-made throughout development — not a single "final upload" commit. When you
-push this project:
-
-1. Commit in stages that reflect real progress (e.g. "Add folder structure and
-   empty HTML shells", "Build Home and About page content", "Add navigation
-   links across all pages", "Add HTML comments", "Add supporting images and
-   alt text", "Expand README with content inventory and sitemap").
-2. Write descriptive messages — avoid "update", "final", "changes".
-3. Push regularly rather than all at once at the deadline.
-
-You can still do this even though the files were generated together — just
-break your `git add` / `git commit` into logical chunks rather than one commit.
