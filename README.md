@@ -144,10 +144,12 @@ identity.
 
 OpenAI.2025.Chat-GBT(version 5.3).[Large language mode].Available at:<https://chat.openai/>[Accessed:12 April 2026].
 
-Mozilla Developer Network (2026) *CSS Grid Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout (Accessed: [add date]).
+Mozilla Developer Network (2026) *CSS Grid Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout (Accessed: 8 August 2026).
 
-Mozilla Developer Network (2026) *Flexible Box Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout (Accessed: [add date]).
+Mozilla Developer Network (2026) *Flexible Box Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout (Accessed: 8 August 2026).
 
-W3Schools (2026) *HTML Forms*. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: [add date]).
+W3Schools (2026) *HTML Forms*. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: 8 August 2026).
 
-Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: https://claude.ai (Accessed: [add date]).
+Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: https://claude.ai (Accessed: 8 August 2026).
+
+FOR IMAGES:Pinterest. 2026. Modern fabric grid website design inspiration. [Online]. Available at: https://www.printerest.com (Accessed: 16 August 2026).
