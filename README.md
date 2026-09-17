@@ -278,3 +278,5 @@ W3Schools (2026) *HTML Forms*. Available at: https://www.w3schools.com/html/html
 Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: https://claude.ai (Accessed: 8 August 2026).
 
 Pinterest (2026) *Modern fabric grid website design inspiration*. Available at: https://www.pinterest.com (Accessed: 16 August 2026).
+
+Unsplash. (n.d.). Unsplash: The internet’s source for visuals. Available at: https://unsplash.com (Accessed 18 September 2026).
