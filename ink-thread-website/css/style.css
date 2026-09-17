@@ -56,21 +56,34 @@ header {
     position: sticky;
     top: 0;
     z-index: 50;
+    background: var(--off-white);
+    border-bottom: 1px solid var(--near-black);
+}
+
+/* .header-inner does the actual flex layout of logo / toggle / nav */
+.header-inner {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 1rem;
     padding: 1.4rem clamp(1.25rem, 4vw, 3.5rem);
-    background: var(--off-white);
-    border-bottom: 1px solid var(--near-black);
 }
 
 header .logo a {
-    width:150px;
+    display: block;
+    font-family: var(--font-display);
+    font-size: 1.3rem;
+    text-transform: uppercase;
+}
+
+header .logo img {
+    width: 150px;
     height: auto;
     display: block;
 }
+
+header .logo .amp { color: var(--coral); }
 
 header nav ul {
     display: flex;
@@ -100,6 +113,62 @@ header nav a::after {
 header nav a:hover::after,
 header nav a:focus-visible::after {
     width: 100%;
+}
+
+header nav a:active {
+    color: var(--coral);
+}
+
+/* ---------- Mobile nav toggle (hamburger, checkbox hack) ---------- */
+.nav-toggle {
+    /* visually hidden but still keyboard/checkbox-functional */
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.nav-toggle-label {
+    display: none;
+    width: 28px;
+    height: 20px;
+    position: relative;
+    cursor: pointer;
+    z-index: 60;
+}
+
+.nav-toggle-label span,
+.nav-toggle-label span::before,
+.nav-toggle-label span::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: var(--near-black);
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nav-toggle-label span { top: 9px; }
+.nav-toggle-label span::before { top: -8px; }
+.nav-toggle-label span::after { top: 8px; }
+
+.nav-toggle:checked ~ .nav-toggle-label span {
+    background: transparent;
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::before {
+    transform: translateY(8px) rotate(45deg);
+    background: var(--coral);
+}
+
+.nav-toggle:checked ~ .nav-toggle-label span::after {
+    transform: translateY(-8px) rotate(-45deg);
+    background: var(--coral);
+}
+
+.nav-toggle-label:focus-visible {
+    outline: 3px solid var(--coral);
+    outline-offset: 3px;
 }
 
 /* ---------- Hero (homepage) ---------- */
@@ -154,7 +223,7 @@ header nav a:focus-visible::after {
     border: 2px solid var(--off-white);
     padding: 0.9rem 1.9rem;
     margin: 0.35rem 0.6rem 0.35rem 0;
-    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
 }
 
 .hero .btn:first-of-type {
@@ -170,6 +239,22 @@ header nav a:focus-visible::after {
 
 .hero .btn:first-of-type:hover {
     color: var(--coral);
+}
+.about-content img,
+.hero img {
+    width: 100%;
+    max-width: 700px;
+    height: 250px;
+    object-fit: cover;
+    margin: 1.5rem 0;
+    border: 1px solid var(--near-black);
+}
+
+
+/* :active gives immediate "pressed" feedback the moment a button is
+   clicked/tapped, distinct from the :hover state that precedes it */
+.btn:active {
+    transform: scale(0.96);
 }
 
 /* ---------- Page heading (inner pages) ---------- */
@@ -237,9 +322,13 @@ section p { max-width: 62ch; }
 }
 
 /* ---------- Services page ---------- */
+/* .service-item (a class selector) already beats `main > section` (two
+   element selectors) on specificity, so no !important is needed here —
+   see slide 39 of the CSS Fundamentals deck ("do not solve every conflict
+   with !important"). */
 .service-item {
-    padding-top: 1.75rem !important;
-    padding-bottom: 1.75rem !important;
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
     border-top: 1px solid var(--near-black);
 }
 
@@ -337,6 +426,15 @@ section p { max-width: 62ch; }
     border-right: 1px solid var(--near-black);
     border-bottom: 1px solid var(--near-black);
     padding: 1.75rem;
+    /* box-shadow + transform on hover: adds depth and gives clear feedback
+       that the card is interactive, without overdoing the effect */
+    box-shadow: 0 4px 14px rgba(20, 20, 20, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.process-steps .step:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(20, 20, 20, 0.12);
 }
 
 .process-steps h2 {
@@ -392,7 +490,7 @@ form button[type="submit"] {
     border: 2px solid var(--near-black);
     padding: 0.9rem 2.2rem;
     cursor: pointer;
-    transition: background 0.2s ease, color 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease, transform 0.1s ease;
 }
 
 form button[type="submit"]:hover,
@@ -400,6 +498,10 @@ form button[type="submit"]:focus-visible {
     background: var(--coral);
     border-color: var(--coral);
     color: var(--near-black);
+}
+
+form button[type="submit"]:active {
+    transform: scale(0.97);
 }
 
 /* ---------- Contact details ---------- */
@@ -448,12 +550,55 @@ footer nav a:hover, footer nav a:focus-visible {
     border-bottom-color: var(--coral);
 }
 
-/* ---------- Responsive ---------- */
-@media (max-width: 640px) {
-    header { flex-direction: column; align-items: flex-start; }
-    header nav ul { gap: 1rem 1.25rem; }
+/* ---------- Responsive: tablet ---------- */
+@media (max-width: 900px) {
+    .portfolio-item:nth-child(1) { grid-column: span 6; grid-row: span 1; }
+    .portfolio-item:nth-child(2),
+    .portfolio-item:nth-child(3) { grid-column: span 3; }
+    .portfolio-item:nth-child(4) { grid-column: span 6; }
+}
+
+/* ---------- Responsive: mobile ---------- */
+@media (max-width: 780px) {
+    .nav-toggle-label { display: block; }
+
+    header nav {
+        flex-basis: 100%;
+        order: 3;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-toggle:checked ~ nav {
+        max-height: 32rem;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 0;
+        padding: 0.5rem 0 1rem;
+    }
+
+    header nav li {
+        border-bottom: 1px solid rgba(20, 20, 20, 0.1);
+    }
+
+    header nav a {
+        display: block;
+        padding: 0.75rem 0.1rem;
+    }
+
+    header nav a::after { display: none; }
+
     .hero, .page-heading { padding-left: 1.25rem; padding-right: 1.25rem; }
+
     footer { flex-direction: column; align-items: flex-start; }
+}
+
+@media (max-width: 640px) {
+    .featured-services ul,
+    .process-steps { grid-template-columns: 1fr; }
 }
 
 /* ---------- Reduced motion ---------- */
