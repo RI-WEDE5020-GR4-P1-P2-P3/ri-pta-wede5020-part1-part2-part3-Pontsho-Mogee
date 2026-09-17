@@ -170,12 +170,21 @@ viewport).
 `index.html`, `portfolio.html` and `request-design.html`, add three
 screenshots (desktop, tablet, mobile) below, e.g.:
 
-```markdown
+markdown
 ### index.html
 ![Desktop](screenshots/index-desktop.png)
 ![Tablet](screenshots/index-tablet.png)
 ![Mobile](screenshots/index-mobile.png)
-```
+
+### portfolio.html
+![Desktop](screenshots/portfolio-desktop.png)
+![Tablet](screenshots/portfolio-tablet.png)
+![Mobile](screenshots/portfolio-mobile.png)
+
+### request-design.html
+![Desktop](screenshots/request-design-desktop.png)
+![Tablet](screenshots/request-design-tablet.png)
+![Mobile](screenshots/request-design-mobile.png)
 
 Save the images in a `screenshots/` folder in the repo root and reference them
 the same way for the other pages before final submission.
