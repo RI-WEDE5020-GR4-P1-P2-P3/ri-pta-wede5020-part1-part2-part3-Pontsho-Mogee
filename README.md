@@ -258,6 +258,12 @@ the same way for the other pages before final submission.
 ### Version 1.2
 - Added page title metadata.
 
+<<<<<<< HEAD
+=======
+### Version 1.1
+- Added the website logo (`logo.png`).
+
+>>>>>>> parent of 80b1a86 (Update README.md)
 ### Version 1.0
 - Added all seven pages: Home, About, Services, Portfolio, How It Works,
   Request a Design, and Contact.
