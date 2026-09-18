@@ -259,8 +259,6 @@ the same way for the other pages before final submission.
 - Added page title metadata.
 
 ### Version 1.1
-- Added the website logo (`logo.png`).
-
 ### Version 1.0
 - Added all seven pages: Home, About, Services, Portfolio, How It Works,
   Request a Design, and Contact.
