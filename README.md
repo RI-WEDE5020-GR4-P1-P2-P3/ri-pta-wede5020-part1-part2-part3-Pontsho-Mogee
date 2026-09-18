@@ -258,28 +258,25 @@ the same way for the other pages before final submission.
 ### Version 1.2
 - Added page title metadata.
 
-<<<<<<< HEAD
-=======
 ### Version 1.1
-- Added the website logo (`logo.png`).
+- Added the website logo (`logo4.png`).
 
->>>>>>> parent of 80b1a86 (Update README.md)
 ### Version 1.0
 - Added all seven pages: Home, About, Services, Portfolio, How It Works,
   Request a Design, and Contact.
 
 ## References
 
-OpenAI (2025) *ChatGPT* (version 5.3) [Large language model]. Available at: https://chat.openai.com/ (Accessed: 12 April 2026).
+OpenAI (2025) *ChatGPT* (version 5.3) [Large language model]. Available at: <https://chat.openai.com/> [Accessed: 12 April 2026].
 
-Mozilla Developer Network (2026) *CSS Grid Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout (Accessed: 8 August 2026).
+Mozilla Developer Network (2026) *CSS Grid Layout*. Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_grid_layout/> [Accessed: 8 August 2026].
 
-Mozilla Developer Network (2026) *Flexible Box Layout*. Available at: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout (Accessed: 8 August 2026).
+Mozilla Developer Network (2026) *Flexible Box Layout*. Available at: <https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/> [Accessed: 8 August 2026].
 
-W3Schools (2026) *HTML Forms*. Available at: https://www.w3schools.com/html/html_forms.asp (Accessed: 8 August 2026).
+W3Schools (2026) *HTML Forms*. Available at: <https://www.w3schools.com/html/html_forms.asp/> [Accessed: 8 August 2026].
 
-Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: https://claude.ai (Accessed: 8 August 2026).
+Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: <https://claude.ai/>[Accessed: 8 August 2026].
 
-Pinterest (2026) *Modern fabric grid website design inspiration*. Available at: https://www.pinterest.com (Accessed: 16 August 2026).
+Pinterest (2026) *Modern fabric grid website design inspiration*. Available at: <https://www.pinterest.com/> [Accessed: 16 August 2026].
 
-Unsplash. (n.d.). Unsplash: The internet’s source for visuals. Available at: https://unsplash.com (Accessed 18 September 2026).
+Unsplash. (n.d.). Unsplash: The internet’s source for visuals. Available at: <https://unsplash.com/> [Accessed 18 September 2026].
