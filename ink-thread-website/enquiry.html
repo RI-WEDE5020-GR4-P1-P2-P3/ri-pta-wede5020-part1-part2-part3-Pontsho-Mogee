@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ink & Thread Studio | Make an Enquiry</title>
+    <meta name="description" content="Enquire about the cost or availability of Ink & Thread Studio products, or ask about volunteering and sponsorship.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- Site header: logo and main navigation, identical across every page -->
+    <header>
+        <div class="header-inner">
+            <div class="logo">
+    <a href="index.html">
+        <img src="images/logo4.png" alt="Ink & Thread Studio">
+    </a>
+</div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <label for="nav-toggle" class="nav-toggle-label" aria-label="Toggle navigation">
+                <span></span>
+            </label>
+            <nav>
+                <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About the Studio</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="how-it-works.html">How It Works</a></li>
+                <li><a href="request-design.html">Request a Design</a></li>
+                <li><a href="enquiry.html">Enquire</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main page content -->
+    <main>
+        <!-- Page title and short introductory description for this page -->
+        <section class="page-heading">
+            <h1>Make an Enquiry</h1>
+            <p>Ask about the cost or availability of our products, or tell us about volunteering or sponsorship.</p>
+        </section>
+
+        <!-- Enquiry form. novalidate means our JavaScript (js/forms.js) shows the error messages instead of the browser -->
+        <section class="design-form">
+            <form id="enquiry-form" action="#" method="post" novalidate>
+
+                <!-- Contact details -->
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" required>
+                <span class="error-message" id="fullname-error"></span>
+
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+                <span class="error-message" id="email-error"></span>
+
+                <label for="phone">Contact Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="013 567 0088" required>
+                <span class="error-message" id="phone-error"></span>
+
+                <!-- What the enquiry is about -->
+                <label for="enquiry-type">What is your enquiry about?</label>
+                <select id="enquiry-type" name="enquiry-type" required>
+                    <option value="">-- Please select --</option>
+                    <option value="cost">Cost of a product</option>
+                    <option value="availability">Availability of a product</option>
+                    <option value="volunteer">Volunteering</option>
+                    <option value="sponsor">Sponsorship</option>
+                </select>
+                <span class="error-message" id="enquiry-type-error"></span>
+
+                <!-- Product details: needed for cost and availability enquiries -->
+                <label for="product">Product</label>
+                <select id="product" name="product">
+                    <option value="">-- Please select --</option>
+                    <option value="tshirt">Custom T-Shirt</option>
+                    <option value="tote">Tote Bag</option>
+                    <option value="artwork">Personalised Artwork</option>
+                    <option value="event">Event Merchandise</option>
+                    <option value="business">Business Merchandise</option>
+                </select>
+                <span class="error-message" id="product-error"></span>
+
+                <label for="quantity">Quantity</label>
+                <input type="number" id="quantity" name="quantity" min="1">
+                <span class="error-message" id="quantity-error"></span>
+
+                <label for="date-needed">Date Needed (optional)</label>
+                <input type="date" id="date-needed" name="date-needed">
+                <span class="error-message" id="date-needed-error"></span>
+
+                <!-- Free text: required for volunteer and sponsor enquiries -->
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
+                <span class="error-message" id="message-error"></span>
+
+                <button type="submit">Send Enquiry</button>
+            </form>
+        </section>
+
+        <!-- Response shown after a valid enquiry. Hidden until the form is submitted correctly -->
+        <section class="enquiry-response" id="enquiry-response" hidden>
+            <h2>Our Response</h2>
+            <p id="response-text"></p>
+        </section>
+    </main>
+
+    <!-- Site footer: copyright and quick links -->
+    <footer>
+        <p>&copy; 2026 Ink & Thread Studio. All rights reserved.</p>
+        <nav>
+            <ul>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="portfolio.html">Our Work</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script src="js/forms.js"></script>
+</body>
+</html>
