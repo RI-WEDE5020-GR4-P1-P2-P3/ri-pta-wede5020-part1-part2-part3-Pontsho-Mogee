@@ -20,13 +20,15 @@ studio's creative identity and makes it easy for customers to browse work and
 request a custom design.
 
 **Objectives:**
-- Create seven linked HTML pages covering Home, About, Services, Portfolio,
-  How It Works, Request a Design, and Contact.
+- Create linked HTML pages covering Home, About, Services, Portfolio,
+  How It Works, Request a Design, Enquire and Contact.
 - Provide a working, consistent navigation menu across every page.
 - Present the studio's services and past work with real descriptive content
   and supporting images.
 - Provide a detailed custom design request form that captures everything
   needed to quote and produce an order.
+- Provide an enquiry form for cost, availability, volunteering and sponsorship
+  questions.
 - Apply a consistent, distinctive visual identity across all pages.
 
 **Target audience:** Students, young adults, individuals and small businesses
@@ -42,6 +44,7 @@ looking for personalised textile products, artwork and graphic design.
 | `portfolio.html` | Gallery of past work, filterable by category (filtering logic added in Part 3) |
 | `how-it-works.html` | The four-step custom order process |
 | `request-design.html` | Detailed custom design request form |
+| `enquiry.html` | Enquiry form for cost, availability, volunteering and sponsorship (added in Part 3) |
 | `contact.html` | Contact details, social links, and a general enquiry form |
 
 ## Technologies Used
@@ -52,6 +55,7 @@ looking for personalised textile products, artwork and graphic design.
 | Browser | Google Chrome / Microsoft Edge |
 | Markup | HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`) |
 | Styling | CSS3 — external stylesheet (`css/style.css`) using Flexbox, CSS Grid, custom properties, and media queries for responsive design |
+| Scripting | JavaScript (plain, no libraries) — `js/script.js` and `js/forms.js` |
 | Version control | Git + GitHub |
 | Fonts | Google Fonts (Archivo Black, Inter) |
 | Images | To be legally sourced / self-produced (see Content Research below) |
@@ -64,7 +68,7 @@ looking for personalised textile products, artwork and graphic design.
    VS Code "Live Server" extension for auto-reload).
 4. Navigate the site using the menu — every page links to every other page.
 
-No server, database or build step is required for Part 1.
+No server, database or build step is required.
 
 ## Project Structure
 
@@ -76,17 +80,20 @@ ink-thread-website/
 ├── portfolio.html
 ├── how-it-works.html
 ├── request-design.html
+├── enquiry.html
 ├── contact.html
 ├── css/
 │   └── style.css
 ├── js/
-│   └── script.js
+│   ├── script.js
+│   └── forms.js
 ├── images/
-│   ├── logo.png
+│   ├── logo4.png
 │   ├── custom-made-tshirt.jpg
 │   ├── personalised-artwork-print.jpg
 │   ├── event-business-merch.jpg
 │   └── branded-business-merch.jpg
+├── screenshots/
 └── README.md
 ```
 
@@ -109,10 +116,11 @@ Home
 ├── Portfolio                – filterable gallery of past work
 ├── How It Works              – 4-step custom order process
 ├── Request a Design          – custom order form
+├── Enquire                   – enquiry form (cost, availability, volunteer, sponsor)
 └── Contact                   – contact details, socials, general enquiry form
 ```
 
-All seven pages sit at the same level, one click from Home, matching the flat
+All pages sit at the same level, one click from Home, matching the flat
 navigation menu used throughout the site.
 
 ## Content Research & Sourcing
@@ -127,6 +135,7 @@ Content inventory — what each page needs, and current sourcing status:
 | Portfolio | Category labels, item titles | 4+ portfolio photos across categories | **Sourced and in use** — 4 images in `images/` covering T-Shirts, Artwork, Events and Business categories |
 | How It Works | 4-step process description | None required | Original copy written |
 | Request a Design | Form field labels only | None required | N/A |
+| Enquire | Form field labels, response text | None required | Original copy written; prices and lead times set to the studio's figures |
 | Contact | Contact details, social handles | None required | Placeholder contact details (fictional business) |
 
 **Outstanding for Part 3:** the Home and About hero images are still missing
@@ -170,7 +179,6 @@ viewport).
 `index.html`, `portfolio.html` and `request-design.html`, add three
 screenshots (desktop, tablet, mobile) below, e.g.:
 
-markdown
 ### index.html
 ![Desktop](screenshots/index-desktop.png)
 ![Tablet](screenshots/index-tablet.png)
@@ -186,10 +194,42 @@ markdown
 ![Tablet](screenshots/request-design-tablet.png)
 ![Mobile](screenshots/request-design-mobile.png)
 
-Save the images in a `screenshots/` folder in the repo root and reference them
-the same way for the other pages before final submission.
+Screenshots for `services.html`, `about.html`, `how-it-works.html`, `contact.html`
+and `enquiry.html` still need to be added to the `screenshots/` folder and
+referenced here before final submission.
 
 ## Changelog
+
+### Part 3 — Enhancing Functionality and SEO
+
+**31 October 2026**
+- **Added:** `enquiry.html`, a new page with a form for cost, availability,
+  volunteer and sponsor enquiries. It collects full name, email, South African
+  phone number, enquiry type, product, quantity, date needed and a message.
+  Fields that apply only to some enquiry types (product and quantity for cost
+  and availability, message for volunteer and sponsor) are checked by the
+  script.
+- **Added:** `js/forms.js`, which validates the enquiry form when it is
+  submitted. Each field shows its own error message. Once the form is valid, it
+  shows a response based on the enquiry type, product and quantity chosen. The
+  product prices and lead times are stored at the top of the file, so they can
+  be updated in one place. No data is sent to a server yet.
+- **Changed:** `css/style.css`, with styling for the error messages and the
+  enquiry response box, added at the end of the stylesheet.
+- **Changed:** navigation menu on all seven pages, with an "Enquire" link added
+  between "Request a Design" and "Contact".
+- **Changed:** `README.md`, with `enquiry.html` and `js/forms.js` added to the
+  pages table, sitemap and project structure; the logo filename in the
+  structure corrected to `logo4.png`; a stray word above the screenshot
+  examples removed; and this Part 3 changelog added.
+- **Feedback fix (Part 2 — commits and changelog):** the Part 2 feedback asked
+  for more regular, detailed commits and a more detailed changelog. Each change
+  is now committed separately with a descriptive message, and each changelog
+  entry states what changed, which file it changed in, and why.
+- **Outstanding:** `contact.html` and `request-design.html` still need the same
+  validation; the portfolio category filter is not yet built; the Part 2 image
+  feedback (3/5) has not yet been addressed; the Home and About hero images are
+  still missing; screenshots for the remaining pages still need adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
@@ -279,4 +319,4 @@ Anthropic (2026) *Claude (Sonnet)* [Large language model]. Available at: <https:
 
 Pinterest (2026) *Modern fabric grid website design inspiration*. Available at: <https://www.pinterest.com/> [Accessed: 16 August 2026].
 
-Unsplash. (n.d.). Unsplash: The internet’s source for visuals. Available at: <https://unsplash.com/> [Accessed 18 September 2026].
+Unsplash. (n.d.). Unsplash: The internet's source for visuals. Available at: <https://unsplash.com/> [Accessed 18 September 2026].
