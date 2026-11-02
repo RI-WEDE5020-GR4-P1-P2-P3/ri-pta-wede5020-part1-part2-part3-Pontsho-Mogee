@@ -747,3 +747,67 @@ footer nav a:hover, footer nav a:focus-visible {
     outline: 3px solid #ff6f61;
     outline-offset: 2px;
 }
+/* Common questions accordion (How It Works page) */
+.faq-accordion {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.accordion-item {
+    border-bottom: 1px solid currentColor;
+}
+
+.accordion-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 1rem 0;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+}
+
+/* A plus sign that turns into a minus sign when the answer is open */
+.accordion-button::after {
+    content: "+";
+    font-size: 1.25rem;
+    margin-left: 1rem;
+}
+
+.accordion-button[aria-expanded="true"]::after {
+    content: "−";
+}
+
+.accordion-button:hover {
+    color: #ff6f61;
+}
+
+.accordion-button:focus-visible {
+    outline: 3px solid #ff6f61;
+    outline-offset: 2px;
+}
+
+/* The answer panel. The [hidden] rule is needed so closed answers really hide */
+.accordion-panel[hidden] {
+    display: none;
+}
+
+.accordion-panel {
+    padding: 0 0 1rem;
+}
+
+.accordion-panel p {
+    margin: 0;
+}
+
+/* Keep the question headings the same size as the body text */
+.accordion-item h3 {
+    margin: 0;
+    font-size: inherit;
+}
