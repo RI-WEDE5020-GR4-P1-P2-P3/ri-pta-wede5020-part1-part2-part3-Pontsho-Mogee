@@ -609,3 +609,53 @@ footer nav a:hover, footer nav a:focus-visible {
         scroll-behavior: auto !important;
     }
 }
+/* Enquiry form error messages and response box */
+.error-message {
+    display: block;
+    color: #b00020;
+    font-size: 0.9rem;
+    min-height: 1.2em;
+    margin-top: 0.25rem;
+}
+
+.enquiry-response {
+    background: #f4f4f4;
+    border-left: 4px solid #222;
+    padding: 1rem 1.25rem;
+    margin: 1.5rem auto;
+    max-width: 700px;
+}
+/* Portfolio category filter */
+.portfolio-filters ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+}
+
+.portfolio-filters button {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    border: 1px solid currentColor;
+    background: transparent;
+    color: inherit;
+    cursor: pointer;
+}
+
+.portfolio-filters button:hover,
+.portfolio-filters button.active {
+    background: #ff6f61;
+    border-color: #ff6f61;
+    color: #111;
+}
+
+.portfolio-filters button:focus-visible {
+    outline: 3px solid currentColor;
+    outline-offset: 2px;
+}
+
+/* Items hidden by the filter. Used by js/portfolio.js */
+.portfolio-item.is-hidden {
+    display: none;
+}
