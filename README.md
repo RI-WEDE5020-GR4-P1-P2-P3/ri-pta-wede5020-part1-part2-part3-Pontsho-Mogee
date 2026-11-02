@@ -83,6 +83,8 @@ ink-thread-website/
 ├── request-design.html
 ├── enquiry.html
 ├── contact.html
+├── robots.txt
+├── sitemap.xml
 ├── css/
 │   └── style.css
 ├── js/
@@ -127,7 +129,8 @@ Home
 ```
 
 All pages sit at the same level, one click from Home, matching the flat
-navigation menu used throughout the site.
+navigation menu used throughout the site. The same list is published to search
+engines in `sitemap.xml`, and `robots.txt` points them to it.
 
 ## Content Research & Sourcing
 
@@ -146,10 +149,10 @@ Content inventory — what each page needs, and current sourcing status:
 
 **Outstanding for the final submission:** the Services images still need
 sourcing; the Part 2 image feedback (3/5) has not yet been addressed;
-screenshots for the remaining pages still need adding; the SEO files
-(`robots.txt` and `sitemap.xml`) still need adding; the How It Works answers
-need checking against the studio's real policies; the live deployment link
-still needs adding.
+screenshots for the remaining pages still need adding; the sitemap and
+`robots.txt` address needs replacing with the live site address; the How It
+Works answers need checking against the studio's real policies; the live
+deployment link still needs adding.
 
 **Sourcing plan:** All text content is original, written specifically for this
 project. Images will be sourced either from the student's own photography /
@@ -236,6 +239,11 @@ referenced here before final submission.
 - **Added:** `js/accordion.js`, which opens and closes the common questions on
   the How It Works page. Only one answer is open at a time, and each question
   button shows whether its answer is open.
+- **Added:** `robots.txt`, which lets search engines index every page and tells
+  them where the sitemap is.
+- **Added:** `sitemap.xml`, which lists all eight pages with their priority and
+  how often they change. The site address is a placeholder until the site is
+  deployed.
 - **Changed:** `portfolio.html`, with the category labels changed to buttons
   that the script can use, each gallery image wrapped in a button so keyboard
   users can open it, the Enquire link added to the menu, and both scripts linked
@@ -267,9 +275,9 @@ referenced here before final submission.
   entry states what changed, which file it changed in, and why.
 - **Outstanding:** the Services images still need sourcing; the Part 2 image
   feedback (3/5) has not yet been addressed; screenshots for the remaining pages
-  still need adding; the SEO files still need adding; the How It Works answers
-  need checking against the studio's real policies; the live deployment link
-  still needs adding.
+  still need adding; the sitemap and `robots.txt` address needs replacing with
+  the live site address; the How It Works answers need checking against the
+  studio's real policies; the live deployment link still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
