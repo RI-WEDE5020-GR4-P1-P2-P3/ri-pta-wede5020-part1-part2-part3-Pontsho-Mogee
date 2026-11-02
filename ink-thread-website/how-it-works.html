@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ink & Thread Studio | How It Works</title>
-    <meta name="description" content="Our simple four-step process from idea to finished custom product.">
+    <meta name="description" content="Our simple four-step process from idea to finished custom product, with answers to common questions.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -71,6 +71,58 @@
             </article>
         </section>
 
+        <!-- Common questions. Each button opens or closes its answer. js/accordion.js does the work.
+             aria-expanded tells screen readers whether the answer is open; aria-controls links the button to its answer. -->
+        <section class="faq-accordion">
+            <h2>Common Questions</h2>
+
+            <div class="accordion">
+                <div class="accordion-item">
+                    <h3>
+                        <button type="button" class="accordion-button" aria-expanded="false" aria-controls="faq-turnaround">
+                            How long does an order take?
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-turnaround" hidden>
+                        <p>Turnaround depends on the product and the quantity. Once a design is approved, most items are ready within a few working days. Use the enquiry form to ask for an estimate for your order.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button type="button" class="accordion-button" aria-expanded="false" aria-controls="faq-artwork">
+                            What file types can I send for artwork?
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-artwork" hidden>
+                        <p>Send your artwork as a PNG, JPG or PDF. Larger, high-resolution files print more clearly. If you only have a small image, tell us in the design description and we will check it before printing.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button type="button" class="accordion-button" aria-expanded="false" aria-controls="faq-changes">
+                            Can I change my design after approving it?
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-changes" hidden>
+                        <p>Small changes can be made before printing starts. Once an item is in production, changes may not be possible, so please check your design proof carefully before approving it.</p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <h3>
+                        <button type="button" class="accordion-button" aria-expanded="false" aria-controls="faq-delivery">
+                            Do you deliver, or can I collect?
+                        </button>
+                    </h3>
+                    <div class="accordion-panel" id="faq-delivery" hidden>
+                        <p>You can choose to collect your order or have it delivered. We will confirm the delivery options and costs once your order is approved.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section class="cta">
             <a href="request-design.html" class="btn">Start Your Design</a>
         </section>
@@ -88,5 +140,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/accordion.js"></script>
 </body>
 </html>
