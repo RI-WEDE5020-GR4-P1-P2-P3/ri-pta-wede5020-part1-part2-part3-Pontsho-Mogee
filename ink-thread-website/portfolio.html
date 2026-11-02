@@ -60,25 +60,34 @@
             </ul>
         </section>
 
-        <!-- Grid of past custom design work, grouped by category via data-category attributes -->
+        <!-- Grid of past custom design work, grouped by category via data-category attributes.
+             Each image sits inside a button so keyboard users can open it. js/lightbox.js opens the larger view. -->
         <section class="portfolio-gallery">
             <article class="portfolio-item" data-category="t-shirts">
-                <img src="images/custom-made-tshirt.jpg" alt="Custom printed T-shirt design">
+                <button type="button" class="lightbox-trigger">
+                    <img src="images/custom-made-tshirt.jpg" alt="Custom printed T-shirt design">
+                </button>
                 <h3>Custom T-Shirt Design</h3>
             </article>
 
             <article class="portfolio-item" data-category="artwork">
-                <img src="images/personalised-artwork-print.jpg" alt="Personalised artwork print">
+                <button type="button" class="lightbox-trigger">
+                    <img src="images/personalised-artwork-print.jpg" alt="Personalised artwork print">
+                </button>
                 <h3>Personalised Artwork</h3>
             </article>
 
             <article class="portfolio-item" data-category="events">
-                <img src="images/event-business-merch.jpg" alt="Event merchandise example">
+                <button type="button" class="lightbox-trigger">
+                    <img src="images/event-business-merch.jpg" alt="Event merchandise example">
+                </button>
                 <h3>Event Merchandise</h3>
             </article>
 
             <article class="portfolio-item" data-category="business">
-                <img src="images/branded-business-merch.jpg" alt="Branded business merchandise">
+                <button type="button" class="lightbox-trigger">
+                    <img src="images/branded-business-merch.jpg" alt="Branded business merchandise">
+                </button>
                 <h3>Business Merchandise</h3>
             </article>
         </section>
@@ -97,5 +106,6 @@
 
     <script src="js/script.js"></script>
     <script src="js/portfolio.js"></script>
+    <script src="js/lightbox.js"></script>
 </body>
 </html>
