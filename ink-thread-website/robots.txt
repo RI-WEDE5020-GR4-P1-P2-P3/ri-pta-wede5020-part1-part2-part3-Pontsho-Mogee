@@ -1,0 +1,8 @@
+# Ink & Thread Studio - robots.txt
+# Tells search engine crawlers that every page may be indexed,
+# and where to find the sitemap.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://YOUR-SITE-ADDRESS/sitemap.xml
