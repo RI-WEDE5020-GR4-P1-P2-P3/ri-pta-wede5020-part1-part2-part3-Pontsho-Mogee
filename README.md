@@ -41,11 +41,11 @@ looking for personalised textile products, artwork and graphic design.
 | `index.html` (Home) | Introduces the studio, its tagline, and links to Portfolio and Request a Design |
 | `about.html` | Studio background, creative philosophy, mission and vision |
 | `services.html` | Full list of services offered, each with description and image |
-| `portfolio.html` | Gallery of past work, filterable by category (filtering logic added in Part 3) |
+| `portfolio.html` | Gallery of past work, filterable by category (filtering logic to be added in Part 3) |
 | `how-it-works.html` | The four-step custom order process |
-| `request-design.html` | Detailed custom design request form |
+| `request-design.html` | Detailed custom design request form with validation (added in Part 3) |
 | `enquiry.html` | Enquiry form for cost, availability, volunteering and sponsorship (added in Part 3) |
-| `contact.html` | Contact details, social links, and a general enquiry form |
+| `contact.html` | Contact details, social links, and a general enquiry form with validation (added in Part 3) |
 
 ## Technologies Used
 
@@ -55,7 +55,7 @@ looking for personalised textile products, artwork and graphic design.
 | Browser | Google Chrome / Microsoft Edge |
 | Markup | HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`) |
 | Styling | CSS3 — external stylesheet (`css/style.css`) using Flexbox, CSS Grid, custom properties, and media queries for responsive design |
-| Scripting | JavaScript (plain, no libraries) — `js/script.js` and `js/forms.js` |
+| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js` and `js/contact-request.js` |
 | Version control | Git + GitHub |
 | Fonts | Google Fonts (Archivo Black, Inter) |
 | Images | To be legally sourced / self-produced (see Content Research below) |
@@ -68,7 +68,8 @@ looking for personalised textile products, artwork and graphic design.
    VS Code "Live Server" extension for auto-reload).
 4. Navigate the site using the menu — every page links to every other page.
 
-No server, database or build step is required.
+No server, database or build step is required. The forms check the data in the
+browser and open the customer's email app; nothing is stored on the website.
 
 ## Project Structure
 
@@ -86,9 +87,12 @@ ink-thread-website/
 │   └── style.css
 ├── js/
 │   ├── script.js
-│   └── forms.js
+│   ├── forms.js
+│   └── contact-request.js
 ├── images/
 │   ├── logo4.png
+│   ├── studio-workbench.jpg
+│   ├── studio-space.png
 │   ├── custom-made-tshirt.jpg
 │   ├── personalised-artwork-print.jpg
 │   ├── event-business-merch.jpg
@@ -97,10 +101,9 @@ ink-thread-website/
 └── README.md
 ```
 
-*Note: images currently sit in a single flat `images/` folder rather than the
+*Note: all images sit in a single flat `images/` folder rather than the
 subfolders originally planned in Part 1. This was simplified once the actual
-number of images was confirmed; see Content Research & Sourcing below for
-outstanding images.*
+number of images was confirmed.*
 
 ## Sitemap
 
@@ -113,7 +116,7 @@ Home
 │   ├── Personalised Artwork
 │   ├── Event Merchandise
 │   └── Business Merchandise
-├── Portfolio                – filterable gallery of past work
+├── Portfolio                – gallery of past work
 ├── How It Works              – 4-step custom order process
 ├── Request a Design          – custom order form
 ├── Enquire                   – enquiry form (cost, availability, volunteer, sponsor)
@@ -129,19 +132,19 @@ Content inventory — what each page needs, and current sourcing status:
 
 | Page | Text content | Images/assets needed | Source / status |
 |---|---|---|---|
-| Home | Welcome message, tagline, service summary | Studio workbench hero image (`images/general/studio-workbench.jpg`) | Original copy written; image referenced in code but **still not sourced — currently broken, outstanding for Part 3** |
-| About | Studio story, philosophy, mission, vision | Studio workspace image (`images/studio/studio-space.jpg`) | Original copy written; image referenced in code but **still not sourced — currently broken, outstanding for Part 3** |
+| Home | Welcome message, tagline, service summary | Studio workbench image (`images/studio-workbench.jpg`) | Original copy written; image in place and renamed to remove spaces and brackets |
+| About | Studio story, philosophy, mission, vision | Studio workspace image (`images/studio-space.png`) | Original copy written; image in place |
 | Services | Description per service (6) | One image per service | Original copy written; images **still to be sourced** (own work samples or licensed stock) |
 | Portfolio | Category labels, item titles | 4+ portfolio photos across categories | **Sourced and in use** — 4 images in `images/` covering T-Shirts, Artwork, Events and Business categories |
 | How It Works | 4-step process description | None required | Original copy written |
-| Request a Design | Form field labels only | None required | N/A |
+| Request a Design | Form field labels and validation messages | None required | Original copy written |
 | Enquire | Form field labels, response text | None required | Original copy written; prices and lead times set to the studio's figures |
-| Contact | Contact details, social handles | None required | Placeholder contact details (fictional business) |
+| Contact | Contact details, form labels, validation messages | None required | Placeholder contact details (fictional business) |
 
-**Outstanding for Part 3:** the Home and About hero images are still missing
-files, so those two `<img>` tags currently render as broken images. This is
-tracked here rather than silently fixed, so it is not lost before final
-submission.
+**Outstanding for the final submission:** the Services images still need
+sourcing; the portfolio category filter is not yet built; the Part 2 image
+feedback (3/5) has not yet been addressed; screenshots for the remaining pages
+still need adding; the live deployment link still needs adding.
 
 **Sourcing plan:** All text content is original, written specifically for this
 project. Images will be sourced either from the student's own photography /
@@ -175,9 +178,9 @@ Tested using Chrome/Edge DevTools device toolbar (Ctrl+Shift+M) at common
 device presets (e.g. iPhone SE, iPad Air, and a standard 1440px desktop
 viewport).
 
-**Screenshots (desktop / tablet / mobile):** *to be added here* — for each of
-`index.html`, `portfolio.html` and `request-design.html`, add three
-screenshots (desktop, tablet, mobile) below, e.g.:
+**Screenshots (desktop / tablet / mobile):** for each of `index.html`,
+`portfolio.html` and `request-design.html`, three screenshots are saved in the
+`screenshots/` folder and shown below.
 
 ### index.html
 ![Desktop](screenshots/index-desktop.png)
@@ -213,23 +216,37 @@ referenced here before final submission.
   submitted. Each field shows its own error message. Once the form is valid, it
   shows a response based on the enquiry type, product and quantity chosen. The
   product prices and lead times are stored at the top of the file, so they can
-  be updated in one place. No data is sent to a server yet.
+  be updated in one place. No data is sent to a server.
+- **Added:** `js/contact-request.js`, which validates the contact and request a
+  design forms. Each field shows its own error message. Once valid, the
+  customer's email app opens with their details filled in, addressed to
+  `hello@inkandthread.co.za`.
+- **Changed:** `contact.html`, with name, email, optional phone number, type of
+  message and message fields, validation, and the Enquire link in the menu.
+- **Changed:** `request-design.html`, with an error message for each required
+  field, checks on quantity, description length and completion date, and the
+  Enquire link in the menu.
 - **Changed:** `css/style.css`, with styling for the error messages and the
   enquiry response box, added at the end of the stylesheet.
 - **Changed:** navigation menu on all seven pages, with an "Enquire" link added
   between "Request a Design" and "Contact".
-- **Changed:** `README.md`, with `enquiry.html` and `js/forms.js` added to the
-  pages table, sitemap and project structure; the logo filename in the
-  structure corrected to `logo4.png`; a stray word above the screenshot
-  examples removed; and this Part 3 changelog added.
+- **Changed:** `index.html`, with the workbench image path updated to match the
+  renamed file.
+- **Changed:** `images/studio-workbench (2).jpg` renamed to
+  `images/studio-workbench.jpg`, to remove the spaces and brackets that can
+  break image links on some hosts.
+- **Changed:** `README.md` — `enquiry.html`, `js/forms.js` and
+  `js/contact-request.js` added to the pages table, sitemap and project
+  structure; the Content Research table updated so the image paths match the
+  files in `images/`; the Outstanding list updated.
 - **Feedback fix (Part 2 — commits and changelog):** the Part 2 feedback asked
   for more regular, detailed commits and a more detailed changelog. Each change
   is now committed separately with a descriptive message, and each changelog
   entry states what changed, which file it changed in, and why.
-- **Outstanding:** `contact.html` and `request-design.html` still need the same
-  validation; the portfolio category filter is not yet built; the Part 2 image
-  feedback (3/5) has not yet been addressed; the Home and About hero images are
-  still missing; screenshots for the remaining pages still need adding.
+- **Outstanding:** the Services images still need sourcing; the portfolio
+  category filter is not yet built; the Part 2 image feedback (3/5) has not yet
+  been addressed; screenshots for the remaining pages still need adding; the
+  live deployment link still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
