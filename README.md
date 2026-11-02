@@ -244,6 +244,7 @@ referenced here before final submission.
 - **Added:** `sitemap.xml`, which lists all eight pages with their priority and
   how often they change. The site address is a placeholder until the site is
   deployed.
+  - **Added:** live deployment on Netlify at https://splendorous-souffle-e10146.netlify.app, with `robots.txt` and `sitemap.xml` pointing to that address.
 - **Changed:** `portfolio.html`, with the category labels changed to buttons
   that the script can use, each gallery image wrapped in a button so keyboard
   users can open it, the Enquire link added to the menu, and both scripts linked
@@ -273,11 +274,6 @@ referenced here before final submission.
   for more regular, detailed commits and a more detailed changelog. Each change
   is now committed separately with a descriptive message, and each changelog
   entry states what changed, which file it changed in, and why.
-- **Outstanding:** the Services images still need sourcing; the Part 2 image
-  feedback (3/5) has not yet been addressed; screenshots for the remaining pages
-  still need adding; the sitemap and `robots.txt` address needs replacing with
-  the live site address; the How It Works answers need checking against the
-  studio's real policies; the live deployment link still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
