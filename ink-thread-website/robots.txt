@@ -5,4 +5,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://YOUR-SITE-ADDRESS/sitemap.xml
+Sitemap: https://splendorous-souffle-e10146.netlify.app/sitemap.xml

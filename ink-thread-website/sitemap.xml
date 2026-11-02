@@ -1,58 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
+<!-- Ink & Thread Studio - sitemap.xml
+     Lists every page on the live site so search engines can find them all. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/index.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/index.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>1.0</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/about.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/about.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/services.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/services.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/portfolio.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/portfolio.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/how-it-works.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/how-it-works.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/request-design.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/request-design.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/enquiry.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/enquiry.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
-        <loc>https://YOUR-SITE-ADDRESS/contact.html</loc>
+        <loc>https://splendorous-souffle-e10146.netlify.app/contact.html</loc>
         <lastmod>2026-11-02</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.6</priority>
