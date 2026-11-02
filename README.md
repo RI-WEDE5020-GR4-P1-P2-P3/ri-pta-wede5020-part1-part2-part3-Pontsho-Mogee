@@ -41,7 +41,7 @@ looking for personalised textile products, artwork and graphic design.
 | `index.html` (Home) | Introduces the studio, its tagline, and links to Portfolio and Request a Design |
 | `about.html` | Studio background, creative philosophy, mission and vision |
 | `services.html` | Full list of services offered, each with description and image |
-| `portfolio.html` | Gallery of past work, filterable by category (filtering logic to be added in Part 3) |
+| `portfolio.html` | Gallery of past work, filterable by category (added in Part 3) |
 | `how-it-works.html` | The four-step custom order process |
 | `request-design.html` | Detailed custom design request form with validation (added in Part 3) |
 | `enquiry.html` | Enquiry form for cost, availability, volunteering and sponsorship (added in Part 3) |
@@ -55,7 +55,7 @@ looking for personalised textile products, artwork and graphic design.
 | Browser | Google Chrome / Microsoft Edge |
 | Markup | HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`) |
 | Styling | CSS3 — external stylesheet (`css/style.css`) using Flexbox, CSS Grid, custom properties, and media queries for responsive design |
-| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js` and `js/contact-request.js` |
+| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js`, `js/contact-request.js` and `js/portfolio.js` |
 | Version control | Git + GitHub |
 | Fonts | Google Fonts (Archivo Black, Inter) |
 | Images | To be legally sourced / self-produced (see Content Research below) |
@@ -88,7 +88,8 @@ ink-thread-website/
 ├── js/
 │   ├── script.js
 │   ├── forms.js
-│   └── contact-request.js
+│   ├── contact-request.js
+│   └── portfolio.js
 ├── images/
 │   ├── logo4.png
 │   ├── studio-workbench.jpg
@@ -116,7 +117,7 @@ Home
 │   ├── Personalised Artwork
 │   ├── Event Merchandise
 │   └── Business Merchandise
-├── Portfolio                – gallery of past work
+├── Portfolio                – gallery of past work, filterable by category
 ├── How It Works              – 4-step custom order process
 ├── Request a Design          – custom order form
 ├── Enquire                   – enquiry form (cost, availability, volunteer, sponsor)
@@ -142,9 +143,10 @@ Content inventory — what each page needs, and current sourcing status:
 | Contact | Contact details, form labels, validation messages | None required | Placeholder contact details (fictional business) |
 
 **Outstanding for the final submission:** the Services images still need
-sourcing; the portfolio category filter is not yet built; the Part 2 image
-feedback (3/5) has not yet been addressed; screenshots for the remaining pages
-still need adding; the live deployment link still needs adding.
+sourcing; the Part 2 image feedback (3/5) has not yet been addressed;
+screenshots for the remaining pages still need adding; the lightbox or accordion
+interactive feature is not yet built; the SEO files (`robots.txt` and
+`sitemap.xml`) still need adding; the live deployment link still needs adding.
 
 **Sourcing plan:** All text content is original, written specifically for this
 project. Images will be sourced either from the student's own photography /
@@ -221,13 +223,20 @@ referenced here before final submission.
   design forms. Each field shows its own error message. Once valid, the
   customer's email app opens with their details filled in, addressed to
   `hello@inkandthread.co.za`.
+- **Added:** `js/portfolio.js`, which filters the portfolio by category. Each
+  filter button shows only the items in its category, and "All" shows every
+  item. Clicking a button marks it as active.
+- **Changed:** `portfolio.html`, with the category labels changed to buttons
+  that the script can use, the Enquire link added to the menu, and the script
+  linked at the bottom of the page.
 - **Changed:** `contact.html`, with name, email, optional phone number, type of
   message and message fields, validation, and the Enquire link in the menu.
 - **Changed:** `request-design.html`, with an error message for each required
   field, checks on quantity, description length and completion date, and the
   Enquire link in the menu.
-- **Changed:** `css/style.css`, with styling for the error messages and the
-  enquiry response box, added at the end of the stylesheet.
+- **Changed:** `css/style.css`, with styling for the error messages, the enquiry
+  response box, the portfolio filter buttons (including focus states for keyboard
+  users), and a rule that hides filtered-out items.
 - **Changed:** navigation menu on all seven pages, with an "Enquire" link added
   between "Request a Design" and "Contact".
 - **Changed:** `index.html`, with the workbench image path updated to match the
@@ -235,18 +244,17 @@ referenced here before final submission.
 - **Changed:** `images/studio-workbench (2).jpg` renamed to
   `images/studio-workbench.jpg`, to remove the spaces and brackets that can
   break image links on some hosts.
-- **Changed:** `README.md` — `enquiry.html`, `js/forms.js` and
-  `js/contact-request.js` added to the pages table, sitemap and project
-  structure; the Content Research table updated so the image paths match the
-  files in `images/`; the Outstanding list updated.
+- **Changed:** `README.md` — the pages table, sitemap and project structure
+  updated for the new pages and scripts; the Content Research table updated so
+  the image paths match the files in `images/`; the Outstanding list updated.
 - **Feedback fix (Part 2 — commits and changelog):** the Part 2 feedback asked
   for more regular, detailed commits and a more detailed changelog. Each change
   is now committed separately with a descriptive message, and each changelog
   entry states what changed, which file it changed in, and why.
-- **Outstanding:** the Services images still need sourcing; the portfolio
-  category filter is not yet built; the Part 2 image feedback (3/5) has not yet
-  been addressed; screenshots for the remaining pages still need adding; the
-  live deployment link still needs adding.
+- **Outstanding:** the Services images still need sourcing; the Part 2 image
+  feedback (3/5) has not yet been addressed; screenshots for the remaining pages
+  still need adding; the lightbox or accordion feature is not yet built; the SEO
+  files still need adding; the live deployment link still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
