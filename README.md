@@ -41,7 +41,7 @@ looking for personalised textile products, artwork and graphic design.
 | `index.html` (Home) | Introduces the studio, its tagline, and links to Portfolio and Request a Design |
 | `about.html` | Studio background, creative philosophy, mission and vision |
 | `services.html` | Full list of services offered, each with description and image |
-| `portfolio.html` | Gallery of past work, filterable by category (added in Part 3) |
+| `portfolio.html` | Gallery of past work, filterable by category and viewable in a lightbox (added in Part 3) |
 | `how-it-works.html` | The four-step custom order process |
 | `request-design.html` | Detailed custom design request form with validation (added in Part 3) |
 | `enquiry.html` | Enquiry form for cost, availability, volunteering and sponsorship (added in Part 3) |
@@ -55,7 +55,7 @@ looking for personalised textile products, artwork and graphic design.
 | Browser | Google Chrome / Microsoft Edge |
 | Markup | HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`) |
 | Styling | CSS3 — external stylesheet (`css/style.css`) using Flexbox, CSS Grid, custom properties, and media queries for responsive design |
-| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js`, `js/contact-request.js` and `js/portfolio.js` |
+| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js`, `js/contact-request.js`, `js/portfolio.js` and `js/lightbox.js` |
 | Version control | Git + GitHub |
 | Fonts | Google Fonts (Archivo Black, Inter) |
 | Images | To be legally sourced / self-produced (see Content Research below) |
@@ -89,7 +89,8 @@ ink-thread-website/
 │   ├── script.js
 │   ├── forms.js
 │   ├── contact-request.js
-│   └── portfolio.js
+│   ├── portfolio.js
+│   └── lightbox.js
 ├── images/
 │   ├── logo4.png
 │   ├── studio-workbench.jpg
@@ -117,7 +118,7 @@ Home
 │   ├── Personalised Artwork
 │   ├── Event Merchandise
 │   └── Business Merchandise
-├── Portfolio                – gallery of past work, filterable by category
+├── Portfolio                – gallery of past work, filterable by category, with lightbox
 ├── How It Works              – 4-step custom order process
 ├── Request a Design          – custom order form
 ├── Enquire                   – enquiry form (cost, availability, volunteer, sponsor)
@@ -144,9 +145,9 @@ Content inventory — what each page needs, and current sourcing status:
 
 **Outstanding for the final submission:** the Services images still need
 sourcing; the Part 2 image feedback (3/5) has not yet been addressed;
-screenshots for the remaining pages still need adding; the lightbox or accordion
-interactive feature is not yet built; the SEO files (`robots.txt` and
-`sitemap.xml`) still need adding; the live deployment link still needs adding.
+screenshots for the remaining pages still need adding; the accordion is not yet
+built; the SEO files (`robots.txt` and `sitemap.xml`) still need adding; the live
+deployment link still needs adding.
 
 **Sourcing plan:** All text content is original, written specifically for this
 project. Images will be sourced either from the student's own photography /
@@ -226,9 +227,14 @@ referenced here before final submission.
 - **Added:** `js/portfolio.js`, which filters the portfolio by category. Each
   filter button shows only the items in its category, and "All" shows every
   item. Clicking a button marks it as active.
+- **Added:** `js/lightbox.js`, which opens each portfolio image in a larger view
+  with its title. The previous and next buttons, or the left and right arrow
+  keys, move between the images that are showing, so the filter still works.
+  Escape or the close button closes the view, and focus returns to the image.
 - **Changed:** `portfolio.html`, with the category labels changed to buttons
-  that the script can use, the Enquire link added to the menu, and the script
-  linked at the bottom of the page.
+  that the script can use, each gallery image wrapped in a button so keyboard
+  users can open it, the Enquire link added to the menu, and both scripts linked
+  at the bottom of the page.
 - **Changed:** `contact.html`, with name, email, optional phone number, type of
   message and message fields, validation, and the Enquire link in the menu.
 - **Changed:** `request-design.html`, with an error message for each required
@@ -236,7 +242,8 @@ referenced here before final submission.
   Enquire link in the menu.
 - **Changed:** `css/style.css`, with styling for the error messages, the enquiry
   response box, the portfolio filter buttons (including focus states for keyboard
-  users), and a rule that hides filtered-out items.
+  users), the gallery image buttons, the lightbox, and a rule that hides
+  filtered-out items.
 - **Changed:** navigation menu on all seven pages, with an "Enquire" link added
   between "Request a Design" and "Contact".
 - **Changed:** `index.html`, with the workbench image path updated to match the
@@ -253,8 +260,8 @@ referenced here before final submission.
   entry states what changed, which file it changed in, and why.
 - **Outstanding:** the Services images still need sourcing; the Part 2 image
   feedback (3/5) has not yet been addressed; screenshots for the remaining pages
-  still need adding; the lightbox or accordion feature is not yet built; the SEO
-  files still need adding; the live deployment link still needs adding.
+  still need adding; the accordion is not yet built; the SEO files still need
+  adding; the live deployment link still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
