@@ -659,3 +659,91 @@ footer nav a:hover, footer nav a:focus-visible {
 .portfolio-item.is-hidden {
     display: none;
 }
+/* Gallery images as buttons (opens the lightbox) */
+.portfolio-gallery .lightbox-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: zoom-in;
+}
+
+.portfolio-gallery .lightbox-trigger img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Lightbox overlay. The [hidden] rule is needed so the overlay really hides when closed */
+.lightbox[hidden] {
+    display: none;
+}
+
+.lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.85);
+}
+
+.lightbox-inner {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    text-align: center;
+}
+
+.lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 75vh;
+    height: auto;
+    margin: 0 auto;
+}
+
+.lightbox-caption {
+    margin-top: 0.75rem;
+    color: #fff;
+}
+
+.lightbox-close,
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: none;
+    background: #fff;
+    color: #111;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.lightbox-close {
+    top: 0;
+    right: 0;
+}
+
+.lightbox-prev {
+    left: 0;
+    top: 40%;
+}
+
+.lightbox-next {
+    right: 0;
+    top: 40%;
+}
+
+.lightbox-close:focus-visible,
+.lightbox-prev:focus-visible,
+.lightbox-next:focus-visible,
+.portfolio-gallery .lightbox-trigger:focus-visible {
+    outline: 3px solid #ff6f61;
+    outline-offset: 2px;
+}
