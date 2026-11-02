@@ -42,7 +42,7 @@ looking for personalised textile products, artwork and graphic design.
 | `about.html` | Studio background, creative philosophy, mission and vision |
 | `services.html` | Full list of services offered, each with description and image |
 | `portfolio.html` | Gallery of past work, filterable by category and viewable in a lightbox (added in Part 3) |
-| `how-it-works.html` | The four-step custom order process |
+| `how-it-works.html` | The four-step custom order process, with an accordion of common questions (accordion added in Part 3) |
 | `request-design.html` | Detailed custom design request form with validation (added in Part 3) |
 | `enquiry.html` | Enquiry form for cost, availability, volunteering and sponsorship (added in Part 3) |
 | `contact.html` | Contact details, social links, and a general enquiry form with validation (added in Part 3) |
@@ -55,7 +55,7 @@ looking for personalised textile products, artwork and graphic design.
 | Browser | Google Chrome / Microsoft Edge |
 | Markup | HTML5 (semantic elements: `header`, `nav`, `main`, `section`, `article`, `footer`) |
 | Styling | CSS3 — external stylesheet (`css/style.css`) using Flexbox, CSS Grid, custom properties, and media queries for responsive design |
-| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js`, `js/contact-request.js`, `js/portfolio.js` and `js/lightbox.js` |
+| Scripting | JavaScript (plain, no libraries) — `js/script.js`, `js/forms.js`, `js/contact-request.js`, `js/portfolio.js`, `js/lightbox.js` and `js/accordion.js` |
 | Version control | Git + GitHub |
 | Fonts | Google Fonts (Archivo Black, Inter) |
 | Images | To be legally sourced / self-produced (see Content Research below) |
@@ -90,7 +90,8 @@ ink-thread-website/
 │   ├── forms.js
 │   ├── contact-request.js
 │   ├── portfolio.js
-│   └── lightbox.js
+│   ├── lightbox.js
+│   └── accordion.js
 ├── images/
 │   ├── logo4.png
 │   ├── studio-workbench.jpg
@@ -119,7 +120,7 @@ Home
 │   ├── Event Merchandise
 │   └── Business Merchandise
 ├── Portfolio                – gallery of past work, filterable by category, with lightbox
-├── How It Works              – 4-step custom order process
+├── How It Works              – 4-step custom order process, with common questions
 ├── Request a Design          – custom order form
 ├── Enquire                   – enquiry form (cost, availability, volunteer, sponsor)
 └── Contact                   – contact details, socials, general enquiry form
@@ -138,16 +139,17 @@ Content inventory — what each page needs, and current sourcing status:
 | About | Studio story, philosophy, mission, vision | Studio workspace image (`images/studio-space.png`) | Original copy written; image in place |
 | Services | Description per service (6) | One image per service | Original copy written; images **still to be sourced** (own work samples or licensed stock) |
 | Portfolio | Category labels, item titles | 4+ portfolio photos across categories | **Sourced and in use** — 4 images in `images/` covering T-Shirts, Artwork, Events and Business categories |
-| How It Works | 4-step process description | None required | Original copy written |
+| How It Works | 4-step process description, common questions and answers | None required | Original copy written; answers are general placeholders to be checked against the studio's real policies |
 | Request a Design | Form field labels and validation messages | None required | Original copy written |
 | Enquire | Form field labels, response text | None required | Original copy written; prices and lead times set to the studio's figures |
 | Contact | Contact details, form labels, validation messages | None required | Placeholder contact details (fictional business) |
 
 **Outstanding for the final submission:** the Services images still need
 sourcing; the Part 2 image feedback (3/5) has not yet been addressed;
-screenshots for the remaining pages still need adding; the accordion is not yet
-built; the SEO files (`robots.txt` and `sitemap.xml`) still need adding; the live
-deployment link still needs adding.
+screenshots for the remaining pages still need adding; the SEO files
+(`robots.txt` and `sitemap.xml`) still need adding; the How It Works answers
+need checking against the studio's real policies; the live deployment link
+still needs adding.
 
 **Sourcing plan:** All text content is original, written specifically for this
 project. Images will be sourced either from the student's own photography /
@@ -231,10 +233,15 @@ referenced here before final submission.
   with its title. The previous and next buttons, or the left and right arrow
   keys, move between the images that are showing, so the filter still works.
   Escape or the close button closes the view, and focus returns to the image.
+- **Added:** `js/accordion.js`, which opens and closes the common questions on
+  the How It Works page. Only one answer is open at a time, and each question
+  button shows whether its answer is open.
 - **Changed:** `portfolio.html`, with the category labels changed to buttons
   that the script can use, each gallery image wrapped in a button so keyboard
   users can open it, the Enquire link added to the menu, and both scripts linked
   at the bottom of the page.
+- **Changed:** `how-it-works.html`, with a "Common Questions" section above the
+  call to action, and the accordion script linked at the bottom of the page.
 - **Changed:** `contact.html`, with name, email, optional phone number, type of
   message and message fields, validation, and the Enquire link in the menu.
 - **Changed:** `request-design.html`, with an error message for each required
@@ -242,8 +249,8 @@ referenced here before final submission.
   Enquire link in the menu.
 - **Changed:** `css/style.css`, with styling for the error messages, the enquiry
   response box, the portfolio filter buttons (including focus states for keyboard
-  users), the gallery image buttons, the lightbox, and a rule that hides
-  filtered-out items.
+  users), the gallery image buttons, the lightbox, the accordion, and a rule that
+  hides filtered-out items.
 - **Changed:** navigation menu on all seven pages, with an "Enquire" link added
   between "Request a Design" and "Contact".
 - **Changed:** `index.html`, with the workbench image path updated to match the
@@ -260,8 +267,9 @@ referenced here before final submission.
   entry states what changed, which file it changed in, and why.
 - **Outstanding:** the Services images still need sourcing; the Part 2 image
   feedback (3/5) has not yet been addressed; screenshots for the remaining pages
-  still need adding; the accordion is not yet built; the SEO files still need
-  adding; the live deployment link still needs adding.
+  still need adding; the SEO files still need adding; the How It Works answers
+  need checking against the studio's real policies; the live deployment link
+  still needs adding.
 
 ### Version 2.1 — Aligned with CSS Fundamentals Part 2 lecture guideline
 - **Fixed a specificity anti-pattern:** `.service-item` used `!important` to
