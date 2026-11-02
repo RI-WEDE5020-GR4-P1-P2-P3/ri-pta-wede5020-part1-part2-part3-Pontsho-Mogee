@@ -48,15 +48,15 @@
             <p>A look at some of our past custom work.</p>
         </section>
 
-        <!-- Category filter buttons for the portfolio grid (click-filtering logic to be added in Part 3 with JavaScript) -->
+        <!-- Category filter buttons. Each data-filter value matches a data-category on a portfolio item.
+             js/portfolio.js shows the matching items when a button is clicked. -->
         <section class="portfolio-filters">
-            <!-- Filtering functionality (JavaScript) to be added in Part 3 -->
             <ul>
-                <li>All</li>
-                <li>T-Shirts</li>
-                <li>Artwork</li>
-                <li>Events</li>
-                <li>Business</li>
+                <li><button type="button" data-filter="all" class="active" aria-pressed="true">All</button></li>
+                <li><button type="button" data-filter="t-shirts" aria-pressed="false">T-Shirts</button></li>
+                <li><button type="button" data-filter="artwork" aria-pressed="false">Artwork</button></li>
+                <li><button type="button" data-filter="events" aria-pressed="false">Events</button></li>
+                <li><button type="button" data-filter="business" aria-pressed="false">Business</button></li>
             </ul>
         </section>
 
@@ -96,5 +96,6 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/portfolio.js"></script>
 </body>
 </html>
